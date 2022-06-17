@@ -1,5 +1,6 @@
 import  { React, useContext, useState } from 'react'
 import { AppContext } from '../../contexts/CartContext'
+import styled from 'styled-components'
 
 const ItemProduct = (props) => {
   const [state, setState] = useContext(AppContext)
@@ -36,25 +37,30 @@ const ItemProduct = (props) => {
   }
 
   return (
-    <div>
+    <Content className='w-90 btn btn-primary m-1'>
       <h1>{props.data.name}</h1>
       <img src={props.data.img} alt="algo" />
       <h2>Precio: $ {props.data.price}</h2>
 
       {showButtons &&
-        <div>
+        <div className=' '>
           <p>Cantidad: </p><button onClick={() => decrement()}>-</button> {cant} <button onClick={() => increment()}>+</button>
           <br />
           <br />
-          <button onClick={() => addToCart(props.data)}>Agregar</button>
+          <button className='btn btn-info' onClick={() => addToCart(props.data)}>Agregar</button>
         </div>
       }
 
       {!showButtons &&
         <p>Agregado al carrito</p>
       }
-    </div>
+    </Content>
   )
 }
 
 export default ItemProduct
+
+const Content = styled.div`
+
+width: 100vh;
+`

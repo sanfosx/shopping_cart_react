@@ -25,7 +25,7 @@ const Content = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    margin:10px
+    margin:5px
   }
   .fa{
       padding: 20px;
@@ -34,7 +34,7 @@ const Content = styled.div`
       color:white;
       text-align: center;
       text-decoration: none;
-      margin: 5px 2px;
+      margin: 3px 1px;
       &:hover{
           color:#fc4b08;
       }

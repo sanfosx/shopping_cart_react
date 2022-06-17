@@ -6,6 +6,7 @@ import CartProvider from "./contexts/CartContext";
 import Home from "./components/home/Home";
 import styled from "styled-components";
 import Images from '../src/assets/images.jsx'
+import Product from '../src/components/product/Product'
 
 const App = () => (
   <CartProvider>
@@ -13,6 +14,7 @@ const App = () => (
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Carrito/>}/>
+        <Route path='/product' element={<Product/>}/>
       </Routes>
     </DivApp>
   </CartProvider>

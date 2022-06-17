@@ -5,7 +5,7 @@ import Social from '../Social'
 const ColumnRight = ({ children }) => {
     return (
         <ContentColumnRight className="col-md-6 mx-auto col-lg-6">
-            <div className="d-flex flex-col  card mb-2 px-1 py-2 text-center align-items-center bg-color">
+            <div className="d-flex flex-col  card mb-1 px-1 py-1 text-center align-items-center bg-color">
                 <HomeContent>
                     {children}
                 </HomeContent>
