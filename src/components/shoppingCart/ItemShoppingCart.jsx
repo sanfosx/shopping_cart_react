@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import  { React, useContext, useState } from 'react'
 import { AppContext } from '../../contexts/CartContext'
 
 const ItemShoppingCart = (props) => {
@@ -48,11 +48,11 @@ const ItemShoppingCart = (props) => {
       <img src={props.data.img} alt="algo" />
       <p>Precio x unidad: $ {props.data.price}</p>
       <p>Cantidad:</p>
-      ------------<button onClick={() => decrement(props.data)}>-</button><strong>  {cant}  </strong>  <button onClick={() => increment(props.data)}>+</button>------------
+      <button onClick={() => decrement(props.data)}>-</button><strong>  {cant}  </strong>  <button onClick={() => increment(props.data)}>+</button>
       <br />
       <h2>Total: $ {props.data.tot} </h2>
-      ------------<button onClick={() => deleteItemCart(props.data.id)}>Borrar</button>------------
-      <p>--------------------------------------------</p>
+      <button onClick={() => deleteItemCart(props.data.id)}>Borrar</button>
+      
     </div>
   )
 }

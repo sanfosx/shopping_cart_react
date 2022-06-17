@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import  { React, useContext, useState } from 'react'
 import { AppContext } from '../../contexts/CartContext'
 
 const ItemProduct = (props) => {
@@ -43,7 +43,7 @@ const ItemProduct = (props) => {
 
       {showButtons &&
         <div>
-          <p>Cantidad:    </p><button onClick={() => decrement()}>-</button> {cant} <button onClick={() => increment()}>+</button>
+          <p>Cantidad: </p><button onClick={() => decrement()}>-</button> {cant} <button onClick={() => increment()}>+</button>
           <br />
           <br />
           <button onClick={() => addToCart(props.data)}>Agregar</button>

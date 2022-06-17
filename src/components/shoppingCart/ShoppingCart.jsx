@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { React, useContext } from 'react';
 import ItemShoppingCart from './ItemShoppingCart';
 import { AppContext } from '../../contexts/CartContext';
 
@@ -35,25 +35,24 @@ const ShoppingCart = () => {
                     <h1>Carrito</h1>
                     <h3>Cantidad de productos: {calcCant()}</h3>
                     <h3>Total a Pagar: $ {calcTotal()}</h3>
-                    ------------<button>Seguir Comprando</button>------------
-                    <br /><br />
-                    <button onClick={() => clearCart()}>Vaciar Carrito</button>------------<button>Finalizar compra</button>
-                    <p>--------------------------------------------</p>
-                    {state?.map((dato, idx) => (
+                    <button>Seguir Comprando</button>
+
+                    <button onClick={() => clearCart()}>Vaciar Carrito</button> <button>Finalizar compra</button>
+                    {state.map((dato, idx) => (
                         <div key={idx}>
                             <ItemShoppingCart data={dato} />
                         </div>
                     ))}
-                    
+
                 </div>
             }
 
             {state.length === 0 &&
-            <h1>Carrito Vacio</h1>
-            
+                <h1>Carrito Vacio</h1>
+
             }
         </>
-    );
+    )
 }
 
 export default ShoppingCart;
