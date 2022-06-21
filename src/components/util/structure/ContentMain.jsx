@@ -18,26 +18,4 @@ const Content = styled.div`
   align-items:center;
   justify-content:center;
   
- 
- 
-  .social {
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    margin:5px
-  }
-  .fa{
-      padding: 20px;
-      font-size: 30px;
-      width: 50px;
-      color:white;
-      text-align: center;
-      text-decoration: none;
-      margin: 3px 1px;
-      &:hover{
-          color:#fc4b08;
-      }
-   }
-
 `

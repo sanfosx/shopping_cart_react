@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Social from '../Social'
 
-const ColumnRight = ({ children }) => {
+const ColumnRight = ({social, children }) => {
     return (
         <ContentColumnRight className="col-md-6 mx-auto col-lg-6">
             <div className="d-flex flex-col  card mb-1 px-1 py-1 text-center align-items-center bg-color">
@@ -10,7 +10,9 @@ const ColumnRight = ({ children }) => {
                     {children}
                 </HomeContent>
             </div>
-            <Social/>
+
+            {social &&
+            <Social/>}
         </ContentColumnRight>
     )
 }

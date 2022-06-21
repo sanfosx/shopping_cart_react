@@ -21,7 +21,7 @@ const Products = () => {
         <Menu/>
       </ColumnLeft>
 
-      <ColumnRight className='w-100'>
+      <ColumnRight >
       <h1>Productos</h1>
         <ContentProduct className='scrollb w-100'>
          

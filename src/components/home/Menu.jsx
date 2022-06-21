@@ -6,7 +6,7 @@ import { GiDrinkMe, GiWrappedSweet } from 'react-icons/gi'
 import { FaHamburger } from 'react-icons/fa';
 import styled from 'styled-components'
 
-const Menu = () => {
+const Menu = (props) => {
     const navigate = useNavigate()
 
     return (

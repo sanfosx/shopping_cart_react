@@ -16,11 +16,11 @@ const Home = () => {
     <ContentHome>
       <ContentMain>
         <ColumnLeft >
-          <Hero />
+          <Hero  ancho = {'200px'} alto = {'200px'}/>
         </ColumnLeft>
-        <ColumnRight>
+        <ColumnRight social={true}>
           <Menu />
-        </ColumnRight>
+        </ColumnRight >
       </ContentMain>
     </ContentHome>
   )

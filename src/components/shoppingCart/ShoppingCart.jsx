@@ -1,6 +1,7 @@
 import { React, useContext } from 'react';
 import ItemShoppingCart from './ItemShoppingCart';
 import { AppContext } from '../../contexts/CartContext';
+import ContentMain from '../util/structure/ContentMain';
 
 const ShoppingCart = () => {
     const [state, setState] = useContext(AppContext);
@@ -29,7 +30,8 @@ const ShoppingCart = () => {
     }
 
     return (
-        <>
+        <ContentMain>
+
             {state.length > 0 &&
                 <div>
                     <h1>Carrito</h1>
@@ -51,7 +53,7 @@ const ShoppingCart = () => {
                 <h1>Carrito Vacio</h1>
 
             }
-        </>
+        </ContentMain>
     )
 }
 

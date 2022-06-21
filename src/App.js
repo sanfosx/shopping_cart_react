@@ -1,22 +1,31 @@
-
 import React from "react";
-import Carrito from './components/shoppingCart/ShoppingCart';
 import { Route, Routes } from 'react-router-dom';
 import CartProvider from "./contexts/CartContext";
 import Home from "./components/home/Home";
 import styled from "styled-components";
 import Images from '../src/assets/images.jsx'
 import Product from '../src/components/product/Product'
+import ShoppingCart from "./components/shoppingCart/ShoppingCart";
+import Login from './components/home/Login'
+import Register from './components/home/Register'
+import { AuthProvider } from "./contexts/AuthContext";
+import HomeUser from "./components/home/HomeUser";
 
 const App = () => (
   <CartProvider>
-     <DivApp >
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/cart' element={<Carrito/>}/>
-        <Route path='/product' element={<Product/>}/>
-      </Routes>
-    </DivApp>
+    <AuthProvider>
+      <DivApp >
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/home' element={<HomeUser/>}/>
+
+          <Route path='/cart' element={<ShoppingCart/>}/>
+          <Route path='/product' element={<Product/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
+        </Routes>
+      </DivApp>
+    </AuthProvider>
   </CartProvider>
 );
 
@@ -30,7 +39,7 @@ const DivApp= styled.div`
   background-repeat: no-repeat;
   background-size:100%;
   height:100vh;
-  padding:30px;
+  padding:20px;
 
   @media (max-width: 990px) {
     height:100%
